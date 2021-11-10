@@ -10,6 +10,7 @@ function NewPlantForm(onAddPlant) {
   
   function handleFormSubmit(){
     //make  post request here
+    
     const newPlant = {
       name: formData.name,
       image: formData.image,
@@ -26,10 +27,17 @@ function NewPlantForm(onAddPlant) {
     fetch("http://localhost:6001/plants", config)
     .then(res => res.json())
     .then(onAddPlant)
+
+    setFormData({
+      name: "",
+      image: "",
+      price: ""
+    })
   }
 
   function handleOnChange(e){
     //target input values and set state
+    
     setFormData({
       ...formData,
       [e.target.name]: e.target.value
