@@ -13,9 +13,6 @@ function PlantCard({name, image, price}) {
       <h4>{name}</h4>
       <p>Price: {price}</p>
       <button onClick={handleStock} className={stock? "primary": ""}>{stock? "In Stock": "Out of Stock"}</button>
-      
-      
-      
     </li>
   );
 }

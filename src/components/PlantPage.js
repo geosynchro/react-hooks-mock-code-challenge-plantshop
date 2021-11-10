@@ -15,9 +15,13 @@ function PlantPage() {
 
   const plantsToDisplay = plants
 
+  function handleAddPlant(newPlant){
+    setPlants([newPlant, ...plants ])
+  }
+
   return (
     <main>
-      <NewPlantForm />
+      <NewPlantForm onAddPlant={handleAddPlant}/>
       <Search />
       <PlantList plants={plantsToDisplay}/>
     </main>
