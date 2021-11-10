@@ -1,9 +1,9 @@
 ##  Deliverables
 
 AS a user I can:
-1 [] See all plants
+1 [x] See all plants
     (fetch request from API, render to page)
-2 [] Add new plant to the page by submitting form
+2 [x] Add new plant to the page by submitting form
     (POST request to local database)
 3 [] Mark a plant as sold out (clickable button on Plant Card)
     (useState on plantCard as each plant has own button)
